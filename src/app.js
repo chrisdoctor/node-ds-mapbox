@@ -23,21 +23,21 @@ app.use(express.static(publicDirPath));
 app.get('', (req, res) => {
     res.render('index', {
         title: "Weather App",
-        name: 'NodeJS Server'
+        name: 'Christopherr'
     });
 });
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: "About",
-        name: 'NodeJS Server'
+        name: 'Christopher'
     });
 });
 
 app.get('/help', (req, res) => {
     res.render('help', {
         title: "Help",
-        name: 'NodeJS Server'
+        name: 'Christopher'
     });
 });
 
@@ -77,7 +77,7 @@ app.get('/help/*', (req, res) => {
     res.render('404', {
         title: "Help",
         msg: 'Could not find help file',
-        name: 'NodeJS Server'
+        name: 'Christopher'
     });
 });
 
@@ -85,7 +85,7 @@ app.get('*', (req, res) => {
     res.render('404', {
         title: "Error",
         msg: 'Could not find page',
-        name: 'NodeJS Server'
+        name: 'Christopher'
     });
 });
 
