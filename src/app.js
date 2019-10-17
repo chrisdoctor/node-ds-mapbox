@@ -6,6 +6,7 @@ const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 //Define paths for express configs
 const publicDirPath = path.join(__dirname, '../public');
@@ -42,7 +43,6 @@ app.get('/help', (req, res) => {
 });
 
 app.get('/weather', (req, res) => {
-    console.log('req.query', req.query);
     if (!req.query.address) {
         return res.send({
             error: 'You must provide an address'
@@ -89,6 +89,6 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log('Server running on port 3000.');
+app.listen(port, () => {
+    console.log('Server running on port', port);
 });
